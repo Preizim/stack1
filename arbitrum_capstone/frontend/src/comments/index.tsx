@@ -1,12 +1,12 @@
-import { ABI, deployedAddress } from "../../contracts/deployed-contract";
+import { ABI, deployedAddress } from "../contracts/deployed-contract";
 import { useEffect, useState } from "react";
-import type { PostDetails } from "../../types/posts/types";
+import type { PostDetails } from "../types/posts/types";
 import styles from "../../styles/Custom.module.css";
 import { getAccount, readContract } from "@wagmi/core";
-import config from "../../wagmi";
-import Comments from "../../components/Comments";
+import config from "../wagmi";
+import Comments from "../components/Comments";
 import Link from "next/link";
-import { useReadForumPostIdIncrement } from "../../contracts/generated";
+import { useReadForumPostIdIncrement } from "../contracts/generated";
 
 const AllComments = () => {
 	const {
